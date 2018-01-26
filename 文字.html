@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		background: orange;
+	}
+		div{
+			width: 500px;
+			margin: 100px auto;
+		}
+		div span{
+			float: left;
+			width: 100px;
+			height: 100px;
+			font-size: 80px;
+			line-height: 100px;
+			position: relative;
+			text-align: center;
+			font-family: "Microsoft Yahei";
+			transition: all 1s linear;
+			perspective: 200px;
+			transform-style: preserve-3d;
+		}
+
+		span::before,span::after{
+			content: attr(data-text);
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+			height: 100px;
+			font-size: 80px;
+			line-height: 100px;
+			font-family: "Microsoft Yahei";
+			text-align: center;
+			color:red;
+			transform: scale(0.9,1);
+			transform-origin: left;
+		}
+
+		span:hover{
+			transform: rotate(25deg);
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<span data-text="狗">狗</span>
+		<span data-text="年">年</span>
+		<span data-text="大">大</span>
+		<span data-text="吉">吉</span>
+	</div>
+	
+</body>
+</html>
